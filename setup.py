@@ -7,5 +7,5 @@ setup(
     license='BSD',
     description='Basic library book tracker.',
     packages=find_packages(),
-    install_requires=['flask', 'gunicorn', 'flask-restful', 'requests'],
+    install_requires=['flask', 'gunicorn', 'flask-restful', 'requests', 'requests-async'],
 )

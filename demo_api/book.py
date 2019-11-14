@@ -26,7 +26,7 @@ class Book(Resource):
             WHERE b.id = ?', (ISBN,)
         ).fetchone()
         if book is not None:
-            abort(400, f'Book with ISBN={ISBN} is already in the database')
+            abort(400, 'Book with ISBN={ISBN} is already in the database'.format(ISBN))
         else:
             db.execute(
                 'INSERT INTO book VALUES(?, ?)', (ISBN, name)
